@@ -1,0 +1,325 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: proxima-nova;
+  font-style: normal;
+}
+
+.card {
+  max-width: 720px;
+  border-radius: 8px;
+  margin: auto;
+}
+.card__content hr {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0 24px;
+}
+@media (max-width: 744px) {
+  .card__content hr {
+    margin: 0 16px;
+  }
+}
+.card__content-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 24px 20px 24px;
+}
+@media (max-width: 744px) {
+  .card__content-header {
+    padding: 16px 16px 16px 16px;
+  }
+}
+.card__content-header .slash {
+  color: rgba(0, 0, 0, 0.2);
+}
+.card__content-header .green {
+  color: #62B435;
+}
+.card__content-header .grey {
+  color: rgba(0, 0, 0, 0.4);
+}
+.card__content-header .red {
+  color: #F64747;
+}
+.card__content-header .black {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 12px;
+  line-height: 14px;
+}
+.card__content-header .user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.card__content-header .user__image {
+  width: 32px;
+  height: 32px;
+}
+.card__content-header .user__info-name {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+}
+.card__content-header .user__info-stats {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 744px) {
+  .card__content-header .user__info-stats {
+    display: none;
+  }
+}
+.card__content-header .user__info-stats.mobile {
+  display: none;
+}
+@media (max-width: 744px) {
+  .card__content-header .user__info-stats.mobile {
+    display: block;
+    display: flex;
+    gap: 4px;
+  }
+}
+.card__content-header .stats {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.card__content-header .stats__item {
+  width: 64px;
+}
+@media (max-width: 744px) {
+  .card__content-header .stats__item {
+    display: none;
+  }
+}
+.card__content-header .stats__item.mobile {
+  display: none;
+}
+@media (max-width: 744px) {
+  .card__content-header .stats__item.mobile {
+    display: block;
+  }
+}
+.card__content-header .stats__item .green {
+  color: #62B435;
+}
+.card__content-header .stats__item .grey {
+  color: rgba(0, 0, 0, 0.4);
+}
+.card__content-header .stats__item .red {
+  color: #F64747;
+}
+.card__content-header .stats__item .black {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 12px;
+  line-height: 14px;
+}
+.card__content-header .stats__item-title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 2px;
+}
+@media (max-width: 744px) {
+  .card__content-header .stats__item-title {
+    border-bottom: none;
+    padding: 0;
+  }
+}
+.card__content-header .stats__item-text {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  margin-top: 2px;
+}
+@media (max-width: 744px) {
+  .card__content-header .stats__item-text {
+    margin-top: none;
+  }
+}
+.card__content-about {
+  padding: 16px 24px;
+  transition: 0.5s;
+}
+@media (max-width: 744px) {
+  .card__content-about {
+    padding: 16px;
+  }
+}
+.card__content-about .opened-text {
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 24px;
+  position: relative;
+  max-height: 100px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.card__content-about .opened-text::before {
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 27px;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 16.67%, #FFF 100%);
+}
+.card__content-betting {
+  padding: 24px 0;
+  border-left: 2px solid #3498DB;
+  background: rgba(240, 241, 242, 0.4);
+  position: relative;
+}
+@media (max-width: 744px) {
+  .card__content-betting {
+    padding: 16px 0;
+  }
+}
+.card__content-betting .arrow {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  box-shadow: 2px 4px 12px 0px rgba(0, 0, 0, 0.08);
+  top: -17px;
+  left: 50%;
+}
+.card__content-betting .arrow img {
+  transition: 0.3s;
+}
+.card__content-betting .arrow.rotate img {
+  transform: rotate(-180deg);
+}
+.card__content-betting .betting-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+@media (max-width: 744px) {
+  .card__content-betting .betting-block {
+    padding: 0 16px;
+  }
+}
+.card__content-betting .betting-block__text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.card__content-betting .betting-block__text-title {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+}
+.card__content-betting .betting-block__text-subtitle {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+}
+@media (max-width: 744px) {
+  .card__content-betting .betting-block__text-subtitle {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+.card__content-betting .betting-block__action {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.card__content-betting .betting-block__action-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.card__content-betting .betting-block__action-info .coefficient__title {
+  color: #333;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+}
+@media (max-width: 744px) {
+  .card__content-betting .betting-block__action-info .coefficient__title {
+    display: none;
+  }
+}
+.card__content-betting .betting-block__action-info .coefficient__title-mobile {
+  color: #333;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  display: none;
+}
+@media (max-width: 744px) {
+  .card__content-betting .betting-block__action-info .coefficient__title-mobile {
+    display: block;
+  }
+}
+.card__content-betting .betting-block__action-info .coefficient__count {
+  color: rgba(0, 0, 0, 0.8);
+  font-family: Futura PT;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+@media (max-width: 744px) {
+  .card__content-betting .betting-block__action-info .coefficient__count {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+.card__content-betting .betting-block__action-button {
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #3498DB;
+  color: #FFF;
+  font-family: Wix Madefor Text;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+@media (max-width: 744px) {
+  .card__content-betting .betting-block__action-button {
+    display: none;
+  }
+}
+.card__content-betting .betting-block__button-mobile {
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #3498DB;
+  color: #FFF;
+  font-family: Wix Madefor Text;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 16px;
+  display: none;
+  margin: 16px 14px 0 14px;
+}
+@media (max-width: 744px) {
+  .card__content-betting .betting-block__button-mobile {
+    display: flex;
+  }
+}/*# sourceMappingURL=style.css.map */
